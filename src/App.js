@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="app">
           <p>
-            Edit and save to reload.
+            Test text
           </p>
       </div>
     );
