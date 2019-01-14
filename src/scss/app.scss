@@ -1,7 +1,21 @@
 @import "variables.scss";
+@import "rating.scss";
+@import "chat.scss";
+@import "register-button.scss";
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
 
 .app {
+  height: 100%;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
 }
 
 

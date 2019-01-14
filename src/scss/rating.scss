@@ -1,0 +1,10 @@
+.rating {
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  background: $blue-color;
+
+  &__header {
+    color: $white-color;
+  }
+}
