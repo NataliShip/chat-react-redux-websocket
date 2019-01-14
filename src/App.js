@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './scss/app.scss';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit and save to reload.
           </p>
-        </header>
       </div>
     );
   }
