@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chat from './containers/Chat';
 import './scss/app.scss';
 import Sidebar from "./containers/Sidebar";
-import NewMessage from "./containers/NewMessage";
+import AddNewMessage from "./containers/AddNewMessage";
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="app">
         <div className='app__chatbox'>
           <Chat/>
-          <NewMessage/>
+          <AddNewMessage/>
         </div>
         <Sidebar/>
       </div>
