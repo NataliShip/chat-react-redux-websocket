@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
+import Message from '../components/Message';
+import PropTypes from 'prop-types';
 
 class Chat extends Component {
   render() {
+    const {props:{messages}} = this
     return (
       <div className="chat">
-        <h2 className="chat__header">Окно чата</h2>
+        <ul>
+          {messages.map(message => (
+            <Message
+              key={message.id}
+              {...message}
+            />
+          ))}
+        </ul>
       </div>
     );
   }
+}
+
+Chat.propTypes = {
+  messages: PropTypes.array.isRequired
 }
 
 export default Chat;
