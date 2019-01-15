@@ -4,5 +4,25 @@
   position: absolute;
   bottom: 0;
   padding: 10px;
+  box-sizing: border-box;
   width: 100%;
+
+  &__input {
+    width: calc(100% - 200px);
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 3px solid $grey-color;
+    border-radius: 10px;
+    outline: none;
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $light-grey-color;
+      opacity: 1; /* Firefox */
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $light-grey-color;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $light-grey-color;
+    }
+  }
 }

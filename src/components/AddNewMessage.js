@@ -13,12 +13,18 @@ class AddNewMessage extends Component {
     return (
       <div className='new-message'>
         <input
+          className='new-message__input'
           onKeyPress={this.sendMessage}
           type='text'
           placeholder='Введите сообщение'
           ref = {(node) => {this.input = node}}
         />
-        <button onClick={this.sendMessage}>Отправить</button>
+        <button
+          className='new-message__button'
+          onClick={this.sendMessage}
+        >
+          Отправить
+        </button>
       </div>
     );
   }
