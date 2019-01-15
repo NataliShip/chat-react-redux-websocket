@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Chat from './containers/Chat';
 import './scss/app.scss';
+import Chat from './containers/Chat';
 import Sidebar from "./containers/Sidebar";
 import AddNewMessage from "./containers/AddNewMessage";
 
