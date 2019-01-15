@@ -1,16 +1,6 @@
-import React, { Component } from 'react';
-import Rating from "../components/Rating";
-import UserList from "../components/UserList";
+import { connect } from 'react-redux';
+import SidebarComponent from '../components/Sidebar'
 
-class Sidebar extends Component {
-  render() {
-    return (
-      <div className='sidebar'>
-        <UserList/>
-        <Rating/>
-      </div>
-    );
-  }
-}
-
-export default Sidebar;
+export const Sidebar = connect(state => ({
+  users: state.users
+}), {})(SidebarComponent)

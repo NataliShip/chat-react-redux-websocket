@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AddNewMessage from "../containers/AddNewMessage";
 
 const Message = ({message, author}) => {
   return (
@@ -10,7 +9,7 @@ const Message = ({message, author}) => {
   )
 }
 
-AddNewMessage.propTypes = {
+Message.propTypes = {
   message: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 }

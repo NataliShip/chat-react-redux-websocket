@@ -1,31 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import AddNewMessageComponent from '../components/AddNewMessage'
+import { addMessage } from "../store/actions";
 
-class AddNewMessage extends Component {
-  sendMessage = (e) => {
-    if (e.key === 'Enter') {
-      this.props.dispatch(this.input.value, 'Я')
-      this.input.value = ''
-    }
+const mapDispatchToProps = dispatch => ({
+  dispatch: (message, author) => {
+    dispatch(addMessage(message, author))
   }
+})
 
-  render() {
-    return (
-      <div className='new-message'>
-        <input
-          onKeyPress={this.sendMessage}
-          type='text'
-          placeholder='Введите сообщение'
-          ref = {(node) => {this.input = node}}
-        />
-        <button onClick={this.sendMessage}>Отправить</button>
-      </div>
-    );
-  }
-}
-
-AddNewMessage.propTypes = {
-  dispatch: PropTypes.func.isRequired
-}
-
-export default AddNewMessage;
+export const AddNewMessage = connect(() => ({}), mapDispatchToProps)(AddNewMessageComponent)
