@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import Rating from './components/Rating';
-import Chat from './components/Chat';
+import Chat from './containers/Chat';
 import './scss/app.scss';
+import Sidebar from "./containers/Sidebar";
+import NewMessage from "./containers/NewMessage";
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Chat/>
-        <Rating/>
+        <div className='app__chatbox'>
+          <Chat/>
+          <NewMessage/>
+        </div>
+        <Sidebar/>
       </div>
     );
   }

@@ -1,0 +1,21 @@
+.sidebar {
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: $blue-color;
+}
+
+// scss for components Rating and UserList, ro reduce amount of scss files
+.rating {
+  &__header {
+    color: $white-color;
+  }
+}
+
+.user-list {
+  &__header {
+    color: $white-color;
+    margin-top: 0;
+  }
+}
