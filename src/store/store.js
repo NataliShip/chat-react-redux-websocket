@@ -7,7 +7,7 @@ export default (initialState = {}) => {
   const store = createStore(
     combineReducers(reducers),
     compose(applyMiddleware(thunk),
-      window.__REDUX_DEVTOOLS_EXTENSION_ ? window.__REDUX_DEVTOOLS_EXTENSION_ : f => f
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   );
 

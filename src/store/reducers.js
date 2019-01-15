@@ -1,8 +1,14 @@
 import * as types from './actionTypes';
 
-const initialState = {};
+export function messages(state = [], action) {
+  switch (action.type) {
 
-export function mainReducer(state = initialState, action) {
+    default:
+      return state;
+  }
+}
+
+export function users(state = [], action) {
   switch (action.type) {
 
     default:
