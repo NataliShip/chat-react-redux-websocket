@@ -9,6 +9,7 @@ export function messages(state = [], action) {
           message: action.message,
           author: action.author,
           id: action.id,
+          time: action.time,
         }
       ])
     default:
