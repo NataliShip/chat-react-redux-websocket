@@ -3,6 +3,14 @@ import * as types from './actionTypes';
 let nextMessageId = 0;
 let nextUserId = 0;
 
+export function getTime() {
+  let date = new Date();
+  let time = [date.getHours(), date.getMinutes(), date.getSeconds()].map(x => {
+    return x < 10 ? `0${x}` : x
+  }).join(':');
+  return time;
+}
+
 export const addMessage = (message, author) => ({
   type: types.ADD_MESSAGE,
   id: nextMessageId++,
@@ -25,15 +33,7 @@ export const messageReceived = (message, author) => ({
   time: getTime()
 })
 
-export const popularUsersList = users => ({
+export const usersList = users => ({
   type: types.USERS_LIST,
   users
 })
-
-export function getTime() {
-  let date = new Date();
-  let time = [date.getHours(), date.getMinutes(), date.getSeconds()].map(function (x) {
-    return x < 10 ? '0' + x : x
-  }).join(':');
-  return time;
-}
