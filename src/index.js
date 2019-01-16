@@ -21,7 +21,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App dispatch={store.dispatch} />
+    <App dispatch={store.dispatch} saga={sagaMiddleware} />
   </Provider>,
   document.getElementById('root')
 );

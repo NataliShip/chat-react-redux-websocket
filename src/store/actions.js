@@ -5,7 +5,7 @@ let nextUserId = 0;
 
 export function getTime() {
   let date = new Date();
-  let time = [date.getHours(), date.getMinutes(), date.getSeconds()].map(x => {
+  let time = [date.getHours(), date.getMinutes()].map(x => {
     return x < 10 ? `0${x}` : x
   }).join(':');
   return time;

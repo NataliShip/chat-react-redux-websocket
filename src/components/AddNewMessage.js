@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 class AddNewMessage extends Component {
   sendMessage = (e) => {
+    const {props: {addMessage, name}} = this;
     if (e.key === 'Enter' || e.type === 'click') {
-      this.props.addMessage(this.input.value, 'Я')
+      addMessage(this.input.value, name);
       this.input.value = ''
     }
   }

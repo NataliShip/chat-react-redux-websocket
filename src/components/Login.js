@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import setupSocket from '../sockets'
+import handleNewMessage from '../sagas'
 
 class Login extends Component {
   constructor() {
@@ -12,13 +13,15 @@ class Login extends Component {
   }
 
   login = (e) => {
-    const {props: {dispatch, addUser, login}} = this
+    const {props: {dispatch, addUser, login, saga}} = this
     if (e.key === 'Enter') {
-      this.setState(this.nameInput.value ? {showLoginForm: false} : {showError: true});
-      if (this.nameInput.value) {
-        addUser(this.nameInput.value);
-        login(this.nameInput.value);
-        const socket = setupSocket(dispatch, this.nameInput.value);
+      const username = this.nameInput.value;
+      this.setState(username ? {showLoginForm: false} : {showError: true});
+      if (username) {
+        addUser(username);
+        login(username);
+        const socket = setupSocket(dispatch, username);
+        saga.run(handleNewMessage, {socket, username});
       }
     }
   }

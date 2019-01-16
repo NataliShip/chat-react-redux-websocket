@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Login dispatch={this.props.dispatch} />
+        <Login dispatch={this.props.dispatch} saga={this.props.saga} />
         <div className='app__chatbox'>
           <Chat/>
           <AddNewMessage/>
