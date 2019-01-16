@@ -25,4 +25,17 @@
       color: $light-grey-color;
     }
   }
+
+  &__button {
+    width: 120px;
+    font-size: 14px;
+    background: $grey-color;
+    border: 3px solid $grey-color;
+    color: $white-color;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+  }
 }
