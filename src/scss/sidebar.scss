@@ -4,6 +4,11 @@
   box-sizing: border-box;
   padding: 20px;
   background: $blue-color;
+  @media screen and (max-width: 768px){
+    & {
+      width: 100%;
+    }
+  }
 }
 
 // scss for components Rating and UserList, ro reduce amount of scss files
@@ -14,8 +19,15 @@
 }
 
 .user-list {
+  margin-bottom: 40px;
   &__header {
     color: $white-color;
     margin-top: 0;
+  }
+  &__item {
+    color: $background;
+    font-size: 16px;
+    margin: 10px 0;
+    display: block;
   }
 }

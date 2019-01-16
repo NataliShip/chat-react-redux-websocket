@@ -18,6 +18,11 @@ body {
   display: flex;
   flex-direction: row;
   position: relative;
+  @media screen and (max-width: 768px){
+    & {
+      flex-direction: column;
+    }
+  }
 
   &__chatbox {
     position: relative;
@@ -26,6 +31,11 @@ body {
     box-sizing: border-box;
     padding: 20px 20px 0 20px;
     background: $background;
+    @media screen and (max-width: 768px){
+      & {
+        width: 100%;
+      }
+    }
   }
 }
 

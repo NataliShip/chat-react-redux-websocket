@@ -10,7 +10,7 @@ class UserList extends Component {
         <h3 className='user-list__header'>Список подключенных пользователей:</h3>
         <ul>
           {users.map(user => (
-            <li key={user.id}>{user.name}</li>
+            <span className='user-list__item' key={user.id}>{user.name}</span>
           ))}
         </ul>
       </div>

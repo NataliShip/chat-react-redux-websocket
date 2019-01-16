@@ -1,9 +1,25 @@
 .chat {
-
+  height: calc(100% - 100px);
+  overflow-y: auto;
 }
 
 .message {
   background: $light-grey-color;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 10px);
+  &:after {
+    content: ' ';
+    display: block;
+    z-index: 10;
+    background: $light-grey-color;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: calc(50% - 7px);
+    right: -7px;
+    transform: rotate(45deg);
+  }
 }

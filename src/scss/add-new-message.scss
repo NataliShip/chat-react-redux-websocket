@@ -24,6 +24,12 @@
     &::-ms-input-placeholder { /* Microsoft Edge */
       color: $light-grey-color;
     }
+
+    @media screen and (max-width: 768px){
+      & {
+        width: 80%;
+      }
+    }
   }
 
   &__button {
@@ -37,5 +43,11 @@
     margin-left: 10px;
     cursor: pointer;
     outline: none;
+
+    @media screen and (max-width: 768px){
+      & {
+        display: none;
+      }
+    }
   }
 }
