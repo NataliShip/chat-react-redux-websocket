@@ -1,0 +1,25 @@
+.login {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  z-index: 10;
+  background: $white-color;
+  border: 1px solid $light-grey-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__header {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__input {
+    width: 240px;
+    border: none;
+    border-bottom: 3px solid $blue-color;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+  }
+}

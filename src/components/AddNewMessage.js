@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class AddNewMessage extends Component {
   sendMessage = (e) => {
     if (e.key === 'Enter' || e.type === 'click') {
-      this.props.dispatch(this.input.value, 'Я')
+      this.props.addMessage(this.input.value, 'Я')
       this.input.value = ''
     }
   }
@@ -31,7 +31,7 @@ class AddNewMessage extends Component {
 }
 
 AddNewMessage.propTypes = {
-  dispatch: PropTypes.func.isRequired
+  addMessage: PropTypes.func.isRequired
 }
 
 export default AddNewMessage;

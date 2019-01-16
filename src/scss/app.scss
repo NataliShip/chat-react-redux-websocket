@@ -2,6 +2,7 @@
 @import "chat.scss";
 @import "sidebar.scss";
 @import "add-new-message";
+@import "login";
 
 html, body, #root {
   height: 100%;
@@ -16,6 +17,7 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
+  position: relative;
 
   &__chatbox {
     position: relative;
