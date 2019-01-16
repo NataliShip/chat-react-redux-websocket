@@ -37,3 +37,8 @@ export const usersList = users => ({
   type: types.USERS_LIST,
   users
 })
+
+export const login = name => ({
+  type: types.LOGIN,
+  name
+})

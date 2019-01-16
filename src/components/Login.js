@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import setupSocket from '../sockets'
 
 class Login extends Component {
   constructor() {
@@ -11,10 +12,13 @@ class Login extends Component {
   }
 
   login = (e) => {
+    const {props: {dispatch, addUser, login}} = this
     if (e.key === 'Enter') {
       this.setState(this.nameInput.value ? {showLoginForm: false} : {showError: true});
       if (this.nameInput.value) {
-        this.props.addUser(this.nameInput.value);
+        addUser(this.nameInput.value);
+        login(this.nameInput.value);
+        const socket = setupSocket(dispatch, this.nameInput.value);
       }
     }
   }

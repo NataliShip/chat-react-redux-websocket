@@ -29,3 +29,12 @@ export function users(state = [], action) {
       return state;
   }
 }
+
+export function login(state = '', action) {
+  switch (action.type) {
+    case types.LOGIN:
+      return action.name
+    default:
+      return state;
+  }
+}
