@@ -7,7 +7,7 @@ class Sidebar extends Component {
     return (
       <div className='sidebar'>
         <UserList users={this.props.users}/>
-        <Rating/>
+        <Rating users={this.props.users} messages={this.props.messages}/>
       </div>
     );
   }

@@ -7,6 +7,7 @@
   @media screen and (max-width: 768px){
     & {
       width: 100%;
+      height: auto;
     }
   }
 }
@@ -16,9 +17,18 @@
   &__header {
     color: $white-color;
   }
+  &__item {
+    color: $background;
+    font-size: 16px;
+    margin: 10px 0;
+    display: block;
+  }
+  &__list {
+    padding-left: 10px;
+  }
 }
 
-.user-list {
+.user-list, rating {
   margin-bottom: 40px;
   &__header {
     color: $white-color;
@@ -29,5 +39,8 @@
     font-size: 16px;
     margin: 10px 0;
     display: block;
+  }
+  &__list {
+    padding-left: 10px;
   }
 }

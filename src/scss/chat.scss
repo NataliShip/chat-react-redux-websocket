@@ -10,6 +10,12 @@
   position: relative;
   box-sizing: border-box;
   width: calc(100% - 10px);
+  &__author {
+    color: $dark-blue-color;
+  }
+  &__time {
+    color: $grey-color;
+  }
   &:after {
     content: ' ';
     display: block;

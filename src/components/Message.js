@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Message = ({message, author, time}) => {
   return (
     <p className='message'>
-      <i>{time} {author}</i>: {message}
+      <i className='message__time'>{time}</i> <i className='message__author'>{author}</i>: {message}
     </p>
   )
 }
