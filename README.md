@@ -1,4 +1,4 @@
-# chat-react-redux-websocket
+# chat-react-redux-websocket [![Build Status](https://travis-ci.com/NataliShip/chat-react-redux-websocket.svg?branch=master)](https://travis-ci.com/NataliShip/chat-react-redux-websocket)
 
 Пример чата на React/Redux с использованием WebSockets, redux-sagaпрепроцессора sass и сборка на webpack.
 
