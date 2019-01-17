@@ -45,7 +45,6 @@ class Login extends Component {
               ? <span className='login__error'>Вы забыли ввести имя</span>
               : null
             }
-
           </div>
           : null
         }

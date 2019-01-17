@@ -19,9 +19,13 @@ const store = createStore(
   )
 );
 
+// send dispatch and saga to open web socket connection when user enter name
 ReactDOM.render(
   <Provider store={store}>
-    <App dispatch={store.dispatch} saga={sagaMiddleware} />
+    <App
+      dispatch={store.dispatch}
+      saga={sagaMiddleware}
+    />
   </Provider>,
   document.getElementById('root')
 );

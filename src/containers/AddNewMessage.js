@@ -4,7 +4,7 @@ import { addMessage } from "../store/actions";
 
 const mapDispatchToProps = dispatch => ({
   addMessage: (message, author) => {
-    dispatch(addMessage(message, author))
+    dispatch(addMessage(message, author));
   }
 })
 
