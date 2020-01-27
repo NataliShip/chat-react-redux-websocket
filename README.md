@@ -28,8 +28,3 @@
 
 ```npm run test``` или ```yarn test```
 
-**Скриншоты:**
-
-![Alt text](http://reactapp.ru/img/chat1.png "Чат на React")
-
-![Alt text](http://reactapp.ru/img/chat2.png "Чат на React")
